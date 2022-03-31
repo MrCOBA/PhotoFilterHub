@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lgv-OB-TOd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Filter App-->
+        <scene sceneID="iaw-iN-yed">
+            <objects>
+                <viewController id="fD1-8k-CZO" customClass="HubViewController" customModule="Photo_Filter_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frl-l3-1qi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdm-Vs-T5B">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ag4-0a-nEI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HubPostTableViewCell" rowHeight="454" id="6Ir-zC-bj3" customClass="HubPostTableViewCell" customModule="Photo_Filter_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="454"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ir-zC-bj3" id="kzS-mR-Icc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYh-Zz-JEM" customClass="CBView" customModule="Photo_Filter_App" customModuleProvider="target">
+                                                    <rect key="frame" x="28" y="27" width="358" height="400"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLs-hl-hFN" customClass="CBImageView" customModule="Photo_Filter_App" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="16" width="326" height="326"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="NLs-hl-hFN" secondAttribute="height" multiplier="1:1" id="gUQ-gj-9l3"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgX-Xj-Qij">
+                                                            <rect key="frame" x="16" y="350" width="326" height="42"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="eFi-rK-vD0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="BackgroundColor1"/>
+                                                    <constraints>
+                                                        <constraint firstItem="NLs-hl-hFN" firstAttribute="centerX" secondItem="tYh-Zz-JEM" secondAttribute="centerX" id="7wa-ym-78i"/>
+                                                        <constraint firstItem="VgX-Xj-Qij" firstAttribute="leading" secondItem="NLs-hl-hFN" secondAttribute="leading" id="WLp-QD-q7B"/>
+                                                        <constraint firstItem="NLs-hl-hFN" firstAttribute="leading" secondItem="tYh-Zz-JEM" secondAttribute="leading" constant="16" id="ZYI-ux-jBU"/>
+                                                        <constraint firstItem="VgX-Xj-Qij" firstAttribute="top" secondItem="NLs-hl-hFN" secondAttribute="bottom" constant="8" id="gwH-5M-5md"/>
+                                                        <constraint firstItem="NLs-hl-hFN" firstAttribute="top" secondItem="tYh-Zz-JEM" secondAttribute="top" constant="16" id="lPU-lK-CcX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VgX-Xj-Qij" secondAttribute="bottom" constant="8" id="oJm-hc-eS7"/>
+                                                        <constraint firstItem="VgX-Xj-Qij" firstAttribute="centerX" secondItem="tYh-Zz-JEM" secondAttribute="centerX" id="oYO-Ru-N9W"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="labelColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="tYh-Zz-JEM" firstAttribute="leading" secondItem="kzS-mR-Icc" secondAttribute="leadingMargin" constant="8" id="INe-md-u37"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tYh-Zz-JEM" secondAttribute="bottom" constant="16" id="VCW-F7-Ila"/>
+                                                <constraint firstItem="tYh-Zz-JEM" firstAttribute="top" secondItem="kzS-mR-Icc" secondAttribute="topMargin" constant="16" id="ZJu-Yj-kWs"/>
+                                                <constraint firstItem="tYh-Zz-JEM" firstAttribute="centerX" secondItem="kzS-mR-Icc" secondAttribute="centerX" id="aFf-oG-AE1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="VgX-Xj-Qij" id="maT-77-fax"/>
+                                            <outlet property="postImageView" destination="NLs-hl-hFN" id="Ylw-bg-qNI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fD1-8k-CZO" id="ker-r8-xKe"/>
+                                    <outlet property="delegate" destination="fD1-8k-CZO" id="SOn-tl-bDO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pKB-Ln-V0g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zdm-Vs-T5B" firstAttribute="trailing" secondItem="pKB-Ln-V0g" secondAttribute="trailing" id="K9h-gh-SMk"/>
+                            <constraint firstItem="Ag4-0a-nEI" firstAttribute="top" secondItem="pKB-Ln-V0g" secondAttribute="top" id="M2c-aA-9Fd"/>
+                            <constraint firstItem="zdm-Vs-T5B" firstAttribute="leading" secondItem="pKB-Ln-V0g" secondAttribute="leading" id="enQ-dG-qgf"/>
+                            <constraint firstItem="pKB-Ln-V0g" firstAttribute="bottom" secondItem="Ag4-0a-nEI" secondAttribute="bottom" id="fT9-i7-foo"/>
+                            <constraint firstItem="Ag4-0a-nEI" firstAttribute="leading" secondItem="pKB-Ln-V0g" secondAttribute="leading" id="flW-L9-fER"/>
+                            <constraint firstItem="zdm-Vs-T5B" firstAttribute="top" secondItem="frl-l3-1qi" secondAttribute="top" id="qHD-xB-FVa"/>
+                            <constraint firstAttribute="bottom" secondItem="zdm-Vs-T5B" secondAttribute="bottom" id="qwD-4t-mMZ"/>
+                            <constraint firstItem="pKB-Ln-V0g" firstAttribute="trailing" secondItem="Ag4-0a-nEI" secondAttribute="trailing" id="xJl-Yw-hjc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hub" image="hub_tab_icon" landscapeImage="hub_tab_icon" largeContentSizeImage="hub_tab_icon" selectedImage="hub_tab_icon" id="JEk-Uz-KSz"/>
+                    <navigationItem key="navigationItem" title="Photo Filter App" id="m5H-gg-thm">
+                        <barButtonItem key="backBarButtonItem" title="Main" id="Iim-0U-s8r"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="zdm-Vs-T5B" id="YgB-aV-f1H"/>
+                        <outlet property="hubTableView" destination="Ag4-0a-nEI" id="7vp-qw-XPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5EM-PC-tpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="843.75"/>
+        </scene>
+        <!--Photo Filter App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Photo_Filter_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Be1-Zn-HaR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="rYn-Rf-hoS">
+                                <rect key="frame" x="52" y="336" width="310.5" height="224"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERu-rL-PMg" customClass="CBButton" customModule="Photo_Filter_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="96"/>
+                                        <color key="backgroundColor" name="BackgroundColor1"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="Gallery">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takeFromGalleryPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="h9s-RD-ef2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-H8-maw" customClass="CBButton" customModule="Photo_Filter_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="310.5" height="96"/>
+                                        <color key="backgroundColor" name="BackgroundColor1"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="Take a Photo">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takeFromCameraPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjM-Re-ODu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_icon" translatesAutoresizingMaskIntoConstraints="NO" id="RhG-dr-dcb">
+                                <rect key="frame" x="157" y="592" width="100" height="100"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HRC-np-Fru"/>
+                                    <constraint firstAttribute="width" constant="100" id="SRM-p7-Lw8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rYn-Rf-hoS" firstAttribute="height" secondItem="Be1-Zn-HaR" secondAttribute="height" multiplier="0.25" id="593-hc-0hG"/>
+                            <constraint firstItem="RhG-dr-dcb" firstAttribute="top" secondItem="rYn-Rf-hoS" secondAttribute="bottom" constant="32" id="8yh-zv-hML"/>
+                            <constraint firstItem="Be1-Zn-HaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ntx-bU-xhT"/>
+                            <constraint firstItem="rYn-Rf-hoS" firstAttribute="width" secondItem="Be1-Zn-HaR" secondAttribute="width" multiplier="0.75" id="QEn-h8-ndb"/>
+                            <constraint firstItem="RhG-dr-dcb" firstAttribute="centerX" secondItem="Be1-Zn-HaR" secondAttribute="centerX" id="QYh-2U-kNq"/>
+                            <constraint firstItem="rYn-Rf-hoS" firstAttribute="centerY" secondItem="Be1-Zn-HaR" secondAttribute="centerY" id="SAd-28-kn1"/>
+                            <constraint firstItem="rYn-Rf-hoS" firstAttribute="centerX" secondItem="Be1-Zn-HaR" secondAttribute="centerX" id="dks-zt-a8q"/>
+                            <constraint firstItem="Be1-Zn-HaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dnj-tV-w2c"/>
+                            <constraint firstItem="Be1-Zn-HaR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e1c-kR-4n8"/>
+                            <constraint firstAttribute="bottom" secondItem="Be1-Zn-HaR" secondAttribute="bottom" id="kKC-LF-UVi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_tab_icon" landscapeImage="home_tab_icon" largeContentSizeImage="home_tab_icon" selectedImage="home_tab_icon" id="act-2S-lkI"/>
+                    <navigationItem key="navigationItem" title="Photo Filter App" id="DJk-tU-hkB">
+                        <barButtonItem key="backBarButtonItem" title="Main" id="mJe-Df-IKB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Be1-Zn-HaR" id="r71-eZ-8Cg"/>
+                        <segue destination="PIH-vc-0bs" kind="show" identifier="AddFilerToPhotoSegue" id="bgr-52-uCz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="119"/>
+        </scene>
+        <!--Photo Editor View Controller-->
+        <scene sceneID="Edu-eY-9SF">
+            <objects>
+                <viewController id="PIH-vc-0bs" customClass="PhotoEditorViewController" customModule="Photo_Filter_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prw-BY-tYx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-hS-t7V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="arJ-tw-tyC" customClass="CBImageView" customModule="Photo_Filter_App" customModuleProvider="target">
+                                <rect key="frame" x="10" y="112" width="394" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="arJ-tw-tyC" secondAttribute="height" multiplier="1:1" id="8fl-ua-976"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O5Q-6S-doO">
+                                <rect key="frame" x="0.0" y="686" width="414" height="176"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="a66-bD-jdq"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z5R-s6-2qR">
+                                    <size key="itemSize" width="130" height="156"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailPhotoCollectionViewCell" id="Bxj-xy-yjd" customClass="ThumbnailPhotoCollectionViewCell" customModule="Photo_Filter_App" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10.5" width="130" height="155.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MF4-sf-VFu">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="155.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5i-4n-4j7">
+                                                    <rect key="frame" x="5" y="130" width="120" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="HAE-de-YZR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pMT-I6-Fga" customClass="CBImageView" customModule="Photo_Filter_App" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="5" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="kVo-zR-BHE"/>
+                                                        <constraint firstAttribute="height" constant="120" id="x9W-VE-lgA"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="labelColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pMT-I6-Fga" firstAttribute="top" secondItem="MF4-sf-VFu" secondAttribute="top" constant="5" id="BHw-ky-LrD"/>
+                                                <constraint firstAttribute="trailing" secondItem="pMT-I6-Fga" secondAttribute="trailing" constant="5" id="FEw-Tw-tYw"/>
+                                                <constraint firstAttribute="bottom" secondItem="f5i-4n-4j7" secondAttribute="bottom" constant="5" id="PlB-9E-BPa"/>
+                                                <constraint firstAttribute="trailing" secondItem="f5i-4n-4j7" secondAttribute="trailing" constant="5" id="Vuw-r0-bi3"/>
+                                                <constraint firstItem="f5i-4n-4j7" firstAttribute="leading" secondItem="MF4-sf-VFu" secondAttribute="leading" constant="5" id="WXq-B1-pj0"/>
+                                                <constraint firstItem="pMT-I6-Fga" firstAttribute="leading" secondItem="MF4-sf-VFu" secondAttribute="leading" constant="5" id="ZwQ-ow-259"/>
+                                                <constraint firstItem="f5i-4n-4j7" firstAttribute="top" secondItem="pMT-I6-Fga" secondAttribute="bottom" constant="5" id="wey-Y2-NNn"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="filterNameLabel" destination="f5i-4n-4j7" id="IT8-4r-twB"/>
+                                            <outlet property="thumbnailPhotoImageView" destination="pMT-I6-Fga" id="Lqm-8t-PI8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gnq-Ja-LYX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="arJ-tw-tyC" firstAttribute="top" secondItem="gnq-Ja-LYX" secondAttribute="top" constant="24" id="0q2-Ms-cRS"/>
+                            <constraint firstItem="yu5-hS-t7V" firstAttribute="top" secondItem="prw-BY-tYx" secondAttribute="top" id="1oa-E9-pWF"/>
+                            <constraint firstItem="gnq-Ja-LYX" firstAttribute="trailing" secondItem="arJ-tw-tyC" secondAttribute="trailing" constant="10" id="3Gs-Yu-pL4"/>
+                            <constraint firstItem="yu5-hS-t7V" firstAttribute="leading" secondItem="gnq-Ja-LYX" secondAttribute="leading" id="8PU-6h-l19"/>
+                            <constraint firstItem="gnq-Ja-LYX" firstAttribute="bottom" secondItem="O5Q-6S-doO" secondAttribute="bottom" id="IR5-g6-3vt"/>
+                            <constraint firstAttribute="bottom" secondItem="yu5-hS-t7V" secondAttribute="bottom" id="MXD-ak-hgl"/>
+                            <constraint firstItem="arJ-tw-tyC" firstAttribute="leading" secondItem="gnq-Ja-LYX" secondAttribute="leading" constant="10" id="PZY-Pu-tva"/>
+                            <constraint firstItem="gnq-Ja-LYX" firstAttribute="trailing" secondItem="O5Q-6S-doO" secondAttribute="trailing" id="c1p-L7-H8P"/>
+                            <constraint firstItem="yu5-hS-t7V" firstAttribute="trailing" secondItem="gnq-Ja-LYX" secondAttribute="trailing" id="jqd-Sp-Hbi"/>
+                            <constraint firstItem="O5Q-6S-doO" firstAttribute="leading" secondItem="gnq-Ja-LYX" secondAttribute="leading" id="ovT-27-Vkr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="67a-NP-1WK">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="yIb-sE-1h4">
+                            <connections>
+                                <action selector="postButtonPressed" destination="PIH-vc-0bs" id="GPA-HL-gXn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="yu5-hS-t7V" id="U20-kd-Ri8"/>
+                        <outlet property="imageView" destination="arJ-tw-tyC" id="Jjj-ws-t1P"/>
+                        <outlet property="thumbnailPhotosCollectionView" destination="O5Q-6S-doO" id="OB2-SB-aIi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWu-Qn-izF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uv9-Pi-QOp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lgv-OB-TOd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QoS-Iu-mka">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gMG-ng-278" kind="relationship" relationship="rootViewController" id="7Y1-d0-ZOf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onR-ZE-T3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1094" y="119"/>
+        </scene>
+        <!--Photo Filter Hub-->
+        <scene sceneID="kqY-iF-rbH">
+            <objects>
+                <tabBarController id="gMG-ng-278" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Photo Filter Hub" id="MbM-Wu-WrN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UwF-J0-7XE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="BackgroundColor1"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" systemColor="systemGrayColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="labelColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gLK-SV-NlD"/>
+                        <segue destination="fD1-8k-CZO" kind="relationship" relationship="viewControllers" id="pfw-UD-wE2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sQ-jh-Khh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="119"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="ERu-rL-PMg">
+            <size key="intrinsicContentSize" width="100" height="54"/>
+        </designable>
+        <designable name="Nku-H8-maw">
+            <size key="intrinsicContentSize" width="189" height="54"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="home_tab_icon" width="24" height="24"/>
+        <image name="hub_tab_icon" width="24" height="24"/>
+        <image name="main_icon" width="256" height="256"/>
+        <namedColor name="BackgroundColor1">
+            <color red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
